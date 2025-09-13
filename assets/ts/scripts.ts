@@ -1,4 +1,8 @@
 var editor = document.querySelector(".editor");
+// Typescript will throw an error here because it doesn't know about
+// CodeMirror but this line will work at runtime because we loaded
+// the CodeMirror script in the HTML file.
+// @ts-ignore
 CodeMirror(editor, {
   lineNumbers: true,
   mode: "htmlmixed",
